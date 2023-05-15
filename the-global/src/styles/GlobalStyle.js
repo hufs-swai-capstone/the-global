@@ -7,9 +7,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #EBEEF3;
   }
 
+  body {
+    background-color: #EBEEF3;
+  }
+  
   li {
     list-style: none;
   }
