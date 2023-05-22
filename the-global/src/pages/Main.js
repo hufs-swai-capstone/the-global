@@ -1,16 +1,16 @@
 //created by Jisu
 
-import AppBar from "../components/AppBar";
 import MenuButton from "../components/MenuButton";
 import HufsLogo from "../components/HufsLogo";
 import styles from "../styles/Main.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function Main() {
+    const navigate = useNavigate();
+    
     return (
         <div>
-            <AppBar />
             <div className={styles.introduction}>
                 <img src="images/logo.png" alt="더 글로벌 로고" className={styles.theGlobalLogo} />
                 <div className={styles.introductionTitle}>
@@ -32,12 +32,16 @@ function Main() {
                     />
                     </div>
                 
+           
+                <div>
                 <MenuButton
                     imgSrc={"./images/owl2.png"}
                     text={"검색"}
                     description1={"국가/학교별 후기 검색"}
                     description2={"강의 후기"}
                 />
+                </div>
+                
                 <MenuButton
                     imgSrc={"./images/owl3.png"}
                     text={"준비해야 할 서류"}

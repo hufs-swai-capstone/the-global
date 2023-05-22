@@ -1,6 +1,5 @@
 // created by Jisu
 
-import AppBar from "../components/AppBar";
 import MenuButton from "../components/MenuButton";
 import ContentCard from "../components/ContentCard";
 import HufsLogo from "../components/HufsLogo";
@@ -9,7 +8,6 @@ import styles from "../styles/Menu_Intro.module.css"
 function MenuIntro() {
     return (
         <div>
-            <AppBar />
             <div className={styles.MenuIntroContent}>
                 <div className = {styles.menuBtn}>
                     <MenuButton
