@@ -44,8 +44,16 @@ function Main() {
                 <div>
                 <MenuButton
                     imgSrc={"./images/owl2.png"}
-                    text={"검색"}
-                    description1={"국가/학교별 후기 검색"}
+                    text={"국가/학교별 후기 검색"}
+                    description1={""}
+                    description2={"국가/학교별 후기 검색"}
+                />
+                </div>
+                <div>
+                <MenuButton
+                    imgSrc={"./images/owl2.png"}
+                    text={"강의 후기 검색"}
+                    description1={""}
                     description2={"강의 후기"}
                 />
                 </div>
