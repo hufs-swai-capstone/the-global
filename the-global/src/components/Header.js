@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // style
 import styled from "styled-components";
@@ -9,6 +10,12 @@ import TravelExploreIcon from "@mui/icons-material/TravelExplore";
 import PersonIcon from "@mui/icons-material/Person";
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const redirectToMainPage = () => {
+    navigate("/");
+  };
+
   const handleTravelExploreClick = () => {
     alert("한국외국어대학교 국제교류팀 페이지로 이동합니다.");
     window.open("https://oia.hufs.ac.kr", "_blank");
@@ -17,7 +24,7 @@ const Header = () => {
   return (
     <HeaderContainer>
       <HomeIconWrapper>
-        <HomeIcon />
+        <HomeIcon onClick={redirectToMainPage} />
       </HomeIconWrapper>
       <IconWrapper>
         <TravelExploreIcon onClick={handleTravelExploreClick} />
