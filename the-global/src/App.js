@@ -1,7 +1,18 @@
-import "./App.css";
+import React from "react";
+
+// components
+import Header from "./components/Header";
+
+// pages
+import SearchPage from "./pages/SearchPage";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <>
+      <Header />
+      <SearchPage />
+    </>
+  );
 }
 
 export default App;
