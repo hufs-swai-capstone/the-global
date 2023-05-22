@@ -19,7 +19,7 @@ import searchData from "../data/search.json";
 // icon
 import SearchIcon from "@mui/icons-material/Search";
 
-const SearchPage = () => {
+const ReturnReportSearch = () => {
   const { periods, programs, countries, universities, informations } =
     searchData;
 
@@ -55,15 +55,29 @@ const SearchPage = () => {
     setSelectedInfo(value);
   };
 
-  const handleSearch = () => {
+  const handleSearchClick = () => {
     console.log("Selected Period:", selectedPeriod);
     console.log("Selected Program:", selectedProgram);
     console.log("Selected Country:", selectedCountry);
     console.log("Selected University:", selectedUniversity);
     console.log("Selected Info:", selectedInfo);
+
+    if (checkRequiredValues()) {
+      replaceUnselectedWithAll();
+    }
   };
 
-  handleSearch();
+  const checkRequiredValues = () => {
+    if (selectedCountry === "") alert("국가를 선택해주세요.");
+    else if (selectedUniversity === "") alert("대학을 선택해주세요.");
+    else return true;
+  };
+
+  const replaceUnselectedWithAll = () => {
+    if (selectedPeriod === "") setSelectedPeriod("전체");
+    if (selectedProgram === "") setSelectedProgram("전체");
+    if (selectedInfo === "") setSelectedInfo("전체");
+  };
 
   return (
     <Container>
@@ -151,7 +165,7 @@ const SearchPage = () => {
           </Select>
         </SelectContainer>
       </InputContainer>
-      <SearchButton>
+      <SearchButton onClick={handleSearchClick}>
         <ButtonText>검색</ButtonText>
         <SearchIcon />
       </SearchButton>
@@ -159,4 +173,4 @@ const SearchPage = () => {
   );
 };
 
-export default SearchPage;
+export default ReturnReportSearch;
