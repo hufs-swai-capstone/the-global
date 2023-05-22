@@ -1,0 +1,11 @@
+/* created by Jisu */
+.logo {
+    width : 257px;
+    height : 59px;
+    position : absolute;
+    bottom : 15px;
+}
+.logoArea {
+    display: flex;
+    justify-content: center;
+}

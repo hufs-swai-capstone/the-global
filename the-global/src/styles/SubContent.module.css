@@ -1,0 +1,30 @@
+/* created by Jisu */
+
+.subContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subTitle {
+    background-color: #1B3EAA;
+    opacity: 70%;
+    font-size: 15px;
+    color : white;
+    font-weight: 600;
+    width: 150px;
+    height : 30px;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding : 0;
+    margin : 0;
+}
+
+.detail {
+    width : 185px;
+    font-size: 12px; 
+    font-weight: 500;
+    overflow-y: scroll;
+    margin-bottom : 30px;
+}
