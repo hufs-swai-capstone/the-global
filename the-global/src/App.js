@@ -5,6 +5,8 @@ import Header from "./components/Header";
 
 // pages
 import Main from "./pages/Main"
+import MenuIntro from "./pages/Menu_Intro";
+import MenuDocument from "./pages/Menu_Document";
 import SearchPage from "./pages/SearchPage";
 
 function App() {
@@ -14,7 +16,9 @@ function App() {
       <Header />
       <Routes>
         <Route index element={<Main />} />
-        <Route path="/search" element={<SearchPage/>} />
+        <Route path="/intro" element={<MenuIntro/>} />
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/document" element={<MenuDocument/>} />
       </Routes>
       
     </>

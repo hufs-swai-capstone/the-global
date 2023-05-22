@@ -9,6 +9,14 @@ import { Link, useNavigate } from "react-router-dom";
 function Main() {
     const navigate = useNavigate();
     
+    const moveIntroPage = () => {
+        navigate("/intro");
+    }
+
+    const moveDocumentPage = () => {
+        navigate("/document");
+    }
+
     return (
         <div>
             <div className={styles.introduction}>
@@ -23,8 +31,8 @@ function Main() {
 
             <div className={styles.MenuButtons}>
                 <p className={styles.MenuButtonGuide}>이용하고 싶은 기능을 선택하세요!</p>
-                    <div>
-                    <MenuButton
+                    <div onClick={moveIntroPage}>
+                    <MenuButton 
                         imgSrc={"./images/owl1.png"}
                         text={"프로그램 소개"}
                         description1={"교환학생과 7+1이 무엇인가요?"}
@@ -42,12 +50,14 @@ function Main() {
                 />
                 </div>
                 
+                <div onClick={moveDocumentPage}>
                 <MenuButton
                     imgSrc={"./images/owl3.png"}
                     text={"준비해야 할 서류"}
                     description1={"선발 후 준비해야 할 서류"}
                     description2={"학점인정을 위해 필요한 서류"}
-                />
+                    />
+                </div>
             </div>
             <HufsLogo />
         </div>
