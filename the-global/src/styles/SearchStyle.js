@@ -24,6 +24,22 @@ export const InputContainer = styled.div`
   gap: 20px;
 `;
 
+export const SearchContiner = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgba(27, 62, 170, 0.7);
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+  margin-bottom: 10%;
+`;
+
 export const SelectContainer = styled.div`
   display: flex;
   align-items: center;
@@ -38,6 +54,14 @@ export const Label = styled.label`
 export const Select = styled.select`
   width: 50%;
   padding: 5px;
+`;
+
+export const TextInput = styled.input`
+  flex: 1;
+  margin: 0 4%;
+  font-size: 15px;
+  border-radius: 6px;
+  padding: 0 10px;
 `;
 
 export const SearchButton = styled.button`

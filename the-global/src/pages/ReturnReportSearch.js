@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 
 // style
+import styled from "styled-components";
 import {
   Container,
   Heading,
