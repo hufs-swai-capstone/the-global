@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Main from "./pages/Main";
 import MenuIntro from "./pages/Menu_Intro";
 import ReturnReportSearch from "./pages/ReturnReportSearch.js";
+import SatisfactionSearch from "./pages/SatisfactionSearch.js";
 import MenuDocument from "./pages/Menu_Document";
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
       <Routes>
         <Route index element={<Main />} />
         <Route path="/intro" element={<MenuIntro />} />
-        <Route path="/search" element={<ReturnReportSearch />} />
+        <Route path="/return-report-search" element={<ReturnReportSearch />} />
+        <Route path="/satisfaction-search" element={<SatisfactionSearch />} />
         <Route path="/document" element={<MenuDocument />} />
       </Routes>
     </>
