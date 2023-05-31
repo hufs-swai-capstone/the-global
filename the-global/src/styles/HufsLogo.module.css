@@ -3,9 +3,10 @@
     width : 257px;
     height : 59px;
     position : absolute;
-    bottom : 15px;
+    bottom : 2%;
 }
 .logoArea {
     display: flex;
     justify-content: center;
+    align-items: end;
 }

@@ -1,38 +1,54 @@
 /* created by Jisu */
 
+.MenuScreen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .MenuButtonGuide {
     font-size: 12px;
     color : #6D6868;
+    text-align: center;
+    margin-top : 13%;
+    margin-bottom : 5%;
 }
 .MenuButtons {
-    position: absolute;
-    top : 40%;
+    display : flex;
+    flex-direction: column;
+}
+
+.MenuButtonBox {
+    width : 288px;
+    height : 130px;
+    margin-bottom : 13%;
+    display: flex;
+    justify-content: center;
 }
 
 .introduction {
-    position: absolute;
-    top:8%;
-    left : 15%;
     width: 70%;
 }
 .theGlobalLogo{
-    width : 300px;
-    height : 13%;
+    margin-top : 50px;
+    width : 100%;
+    height : 10%;
+    margin-bottom : 35px;
 
 }
 .introductionTitle{
-    position :absolute;
-    left : 15%;
-    top : 65%;
-    font-size: 18px;
+    font-size: 27px;
+    font-weight: 800;
     color : #052B48;
+    text-align: center;
+    margin-bottom: 25px;
+    line-height: 130%;
 }
 
 .introductionDescription{
-    position : absolute;
-    top : 160%;
-    left : 5%;
     font-weight: 500;
     text-align: center;
+    margin-bottom: 25px;
+    line-height: 130%;
 }
 

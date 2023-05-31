@@ -1,32 +1,42 @@
 /* created by Jisu */
 
+.contentSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top : 38%;
+    width : 100%;
+}
 .contentCards {
     display:flex;
-    justify-content: center;
-    overflow-x: scroll;
-    position: absolute;
-    top : 40%;
-    left : 10%;
-    width : 80%;
+    align-items: center;
+    width: 80%;
     height : 400px;
+    overflow: auto;
+    scroll-snap-type: x proximity;
+    margin : 0 15vw;
+    scroll-snap-align: center;
 }
 
 .menuBtn { 
-    position: absolute;
-    top : 10%;
-    left : 11%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom : 3%;
+
 } 
 
 .instruction {
     font-size: 12px;
     color : #6D6868;
-    position: absolute;
-    top : 36%;
-    left : 30%;
+    text-align: center;
+    margin-bottom: 3%;;
 }
+
 .usefulInfo{
     font-size: 13px;
-    position: absolute;
-    top :  25%;
-    left : 20%;
+    text-align: center;
+    line-height: 130%;
 }
+
