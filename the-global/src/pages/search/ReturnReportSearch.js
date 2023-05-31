@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // style
 import styled from "styled-components";
@@ -11,15 +12,17 @@ import {
   Select,
   SearchButton,
   ButtonText,
-} from "../styles/SearchStyle";
+} from "../../styles/SearchStyle";
 
 // data
-import searchData from "../data/search.json";
+import searchData from "../../data/search.json";
 
 // icon
 import SearchIcon from "@mui/icons-material/Search";
 
 const ReturnReportSearch = () => {
+  const navigate = useNavigate();
+
   const { periods, programs, countries, universities, informations } =
     searchData;
 
@@ -56,14 +59,20 @@ const ReturnReportSearch = () => {
   };
 
   const handleSearchClick = () => {
-    console.log("Selected Period:", selectedPeriod);
-    console.log("Selected Program:", selectedProgram);
-    console.log("Selected Country:", selectedCountry);
-    console.log("Selected University:", selectedUniversity);
-    console.log("Selected Info:", selectedInfo);
-
     if (checkRequiredValues()) {
       replaceUnselectedWithAll();
+
+      const selected_data = {
+        period: `${selectedPeriod}`,
+        program: `${selectedProgram}`,
+        country: `${selectedCountry}`,
+        university: `${selectedUniversity}`,
+        selected_information: `${selectedInfo}`,
+      };
+
+      navigate("/report-result", {
+        state: { selected_data },
+      });
     }
   };
 
