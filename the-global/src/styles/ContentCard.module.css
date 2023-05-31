@@ -3,22 +3,28 @@
 .contentCardBody{
     display: flex;
     justify-content: center;
+    text-align: center;
+    scroll-snap-align: center;
+    padding-right : 10%;
 }
 .contentCard{
     background-color: white;
-    width : 246px;
-    height : 368px;
+    width : 65vw;
+    height : 43vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
     box-shadow: 5px 8px 15px rgb(153, 150, 150);
-    margin : 0px 15px;
-    overflow-x: scroll;
+    margin : 0px 15px
 }
 .title{
-    width: 140px;
+    width: 50vw;
     font-size: 18px;
     color :#1B3EAA;
     font-weight:900;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    line-height: 130%;
+    white-space: pre-line;
 }
