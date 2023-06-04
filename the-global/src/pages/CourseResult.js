@@ -50,6 +50,7 @@ function Star(props) {
 
 function SearchResult() {
   const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
     setData(jsonData);
@@ -60,29 +61,42 @@ function SearchResult() {
     university: "전체",
     order: "만족도 높은 순",
   };
-  const { order, ...filters } = selected_data;
+  // const selected_data = {
+  //   name : "러시아",
+  // };
 
-  const filteredData = data.filter((item) => {
-    for (const key in filters) {
-      if (filters[key] === "전체") {
-        continue;
+  useEffect(() => {
+    if ('name' in selected_data) {
+      const filtered = data.filter((item) => item.courseName.includes(selected_data.name));
+      setFilteredData(filtered);
+    } else {
+      const { order, ...filters } = selected_data;
+  
+      const filtered = data.filter((item) => {
+        for (const key in filters) {
+          if (filters[key] === "전체") {
+            continue;
+          }
+          if (item[key] !== filters[key]) {
+            return false;
+          }
+        }
+        return true;
+      });
+  
+      if (order === "만족도 높은 순") {
+        filtered.sort((a, b) => b.satisfaction - a.satisfaction);
+      } else if (order === "만족도 낮은 순") {
+        filtered.sort((a, b) => a.satisfaction - b.satisfaction);
+      } else if (order === "학점 높은 순") {
+        filtered.sort((a, b) => b.credit - a.credit);
+      } else if (order === "학점 낮은 순") {
+        filtered.sort((a, b) => a.credit - b.credit);
       }
-      if (item[key] !== filters[key]) {
-        return false;
-      }
+  
+      setFilteredData(filtered);
     }
-    return true;
-  });
-
-  if (order === "만족도 높은 순") {
-    filteredData.sort((a, b) => b.satisfaction - a.satisfaction);
-  } else if (order === "만족도 낮은 순") {
-    filteredData.sort((a, b) => a.satisfaction - b.satisfaction);
-  } else if (order === "학점 높은 순") {
-    filteredData.sort((a, b) => b.credit - a.credit);
-  } else if (order === "학점 낮은 순") {
-    filteredData.sort((a, b) => a.credit - b.credit);
-  }
+  }, [data]);
 
   return (
     <div>
