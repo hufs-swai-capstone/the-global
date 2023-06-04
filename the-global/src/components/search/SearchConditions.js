@@ -9,6 +9,8 @@ import {
   SelectContainer,
   Label,
   Select,
+  SearchConditionsButton,
+  ButtonText,
 } from "../../styles/SearchStyle";
 
 // data
@@ -100,6 +102,9 @@ const SearchConditions = () => {
             ))}
           </Select>
         </SelectContainer>
+        <SearchConditionsButton>
+          <ButtonText>검색</ButtonText>
+        </SearchConditionsButton>
       </InputContainer>
     </Container>
   );
