@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // style
-import styled from "styled-components";
 import {
   Container,
   Heading,
@@ -13,15 +13,23 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 
 const SearchLectures = () => {
+  const navigate = useNavigate();
+
   const [searchText, setSearchText] = useState("");
 
   const handleInputChange = (e) => {
     setSearchText(e.target.value);
   };
 
-  useEffect(() => {
-    console.log(searchText);
-  }, [searchText]);
+  const handleSearchClick = () => {
+    if (searchText !== "") {
+      const selected_data = searchText;
+
+      navigate("/course-result", {
+        state: selected_data,
+      });
+    }
+  };
 
   return (
     <Container>
@@ -33,7 +41,7 @@ const SearchLectures = () => {
           value={searchText}
           onChange={handleInputChange}
         />
-        <SearchIcon />
+        <SearchIcon onClick={handleSearchClick} />
       </SearchContiner>
     </Container>
   );

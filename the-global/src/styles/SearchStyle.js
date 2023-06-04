@@ -61,7 +61,9 @@ export const TextInput = styled.input`
   margin: 0 4%;
   font-size: 15px;
   border-radius: 6px;
-  padding: 0 10px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
 `;
 
 export const SearchButton = styled.button`
@@ -73,6 +75,22 @@ export const SearchButton = styled.button`
   padding: 10px;
   border-radius: 8px;
   margin-top: 15%;
+  border: none;
+  background-color: rgba(27, 62, 170, 0.7);
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+`;
+
+export const SearchConditionsButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 8%;
   border: none;
   background-color: rgba(27, 62, 170, 0.7);
   color: white;
