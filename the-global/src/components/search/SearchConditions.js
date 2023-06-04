@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // style
 import styled from "styled-components";
@@ -17,6 +18,7 @@ import {
 import searchData from "../../data/search.json";
 
 const SearchConditions = () => {
+  const navigate = useNavigate();
   const { countries, universities, sorting } = searchData;
 
   const [selectedCountry, setSelectedCountry] = useState("");
@@ -37,6 +39,32 @@ const SearchConditions = () => {
   const handleSortingChange = (e) => {
     const value = e.target.value;
     setSelectedSorting(value);
+  };
+
+  const handleSearchClick = () => {
+    if (checkRequiredValues()) {
+      replaceUnselectedDefault();
+
+      const selected_data = {
+        country: `${selectedCountry}`,
+        university: `${selectedUniversity}`,
+        order: `${selectedSorting}`,
+      };
+
+      navigate("/course-result", {
+        state: selected_data,
+      });
+    }
+  };
+
+  const checkRequiredValues = () => {
+    if (selectedCountry === "") alert("국가를 선택해주세요.");
+    else if (selectedUniversity === "") alert("대학을 선택해주세요.");
+    else return true;
+  };
+
+  const replaceUnselectedDefault = () => {
+    if (selectedSorting === "") setSelectedSorting("만족도 높은 순");
   };
 
   useEffect(() => {
@@ -103,7 +131,7 @@ const SearchConditions = () => {
           </Select>
         </SelectContainer>
         <SearchConditionsButton>
-          <ButtonText>검색</ButtonText>
+          <ButtonText onClick={handleSearchClick}>검색</ButtonText>
         </SearchConditionsButton>
       </InputContainer>
     </Container>
