@@ -3,15 +3,15 @@
 import ContentCard from "../components/ContentCard";
 import HufsLogo from "../components/HufsLogo";
 import MenuButtonRectangular from "../components/MenuButtonRectangular";
-import styles from "../styles/Menu_Document.module.css";
-import owl3 from "../images/owl3.png";
+import styles from "../styles/Menu_Document.module.css"
+
 
 function MenuDocument() {
     return (
         <div>
             <div className={styles.menuBtn}>
                 <MenuButtonRectangular
-                    imgSrc = {owl3}
+                    imgSrc = {"../images/owl3.png"}
                     text={"각 절차별 준비해야 할 서류"}
                     description1={"선발 후 준비해야하는 서류"}
                     description2={"학점 인정을 위해 필요한 서류"}
