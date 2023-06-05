@@ -71,7 +71,7 @@ const ReturnReportSearch = () => {
       };
 
       navigate("/report-result", {
-        state: { selected_data },
+        state: selected_data,
       });
     }
   };
@@ -79,13 +79,13 @@ const ReturnReportSearch = () => {
   const checkRequiredValues = () => {
     if (selectedCountry === "") alert("국가를 선택해주세요.");
     else if (selectedUniversity === "") alert("대학을 선택해주세요.");
+    else if (selectedInfo === "") alert("희망 정보 선택을 선택해주세요.");
     else return true;
   };
 
   const replaceUnselectedWithAll = () => {
     if (selectedPeriod === "") setSelectedPeriod("전체");
     if (selectedProgram === "") setSelectedProgram("전체");
-    if (selectedInfo === "") setSelectedInfo("전체");
   };
 
   return (
@@ -160,9 +160,10 @@ const ReturnReportSearch = () => {
           )}
         </SelectContainer>
         <SelectContainer>
-          <Label htmlFor="selectedInfo">희망 정보 선택</Label>
+          <Label htmlFor="selectedInfo">희망 정보 선택 *</Label>
           <Select
             id="selectedInfo"
+            required
             value={selectedInfo}
             onChange={handleInfoChange}
           >
