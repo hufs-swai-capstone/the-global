@@ -55,7 +55,8 @@ const ReturnReportSearch = () => {
 
   const handleInfoChange = (e) => {
     const value = e.target.value;
-    setSelectedInfo(value);
+    const changeValue = informations[value];
+    setSelectedInfo(changeValue);
   };
 
   const handleSearchClick = () => {
@@ -79,7 +80,7 @@ const ReturnReportSearch = () => {
   const checkRequiredValues = () => {
     if (selectedCountry === "") alert("국가를 선택해주세요.");
     else if (selectedUniversity === "") alert("대학을 선택해주세요.");
-    else if (selectedInfo === "") alert("희망 정보 선택을 선택해주세요.");
+    else if (selectedInfo === "") alert("희망 정보를 선택해주세요.");
     else return true;
   };
 
@@ -100,7 +101,7 @@ const ReturnReportSearch = () => {
             onChange={handlePeriodChange}
           >
             {periods.map((period, index) => (
-              <option key={index} value={period}>
+              <option key={period} value={period}>
                 {period}
               </option>
             ))}
@@ -114,7 +115,7 @@ const ReturnReportSearch = () => {
             onChange={handleProgramChange}
           >
             {programs.map((program, index) => (
-              <option key={index} value={program}>
+              <option key={program} value={program}>
                 {program}
               </option>
             ))}
@@ -132,7 +133,7 @@ const ReturnReportSearch = () => {
               국가 선택
             </option>
             {countries.map((country, index) => (
-              <option key={index} value={country}>
+              <option key={country} value={country}>
                 {country}
               </option>
             ))}
@@ -152,7 +153,7 @@ const ReturnReportSearch = () => {
             >
               <option value="">대학 선택</option>
               {universities[selectedCountry].map((university, index) => (
-                <option key={index} value={university}>
+                <option key={university} value={university}>
                   {university}
                 </option>
               ))}
@@ -167,8 +168,11 @@ const ReturnReportSearch = () => {
             value={selectedInfo}
             onChange={handleInfoChange}
           >
-            {informations.map((info, index) => (
-              <option key={index} value={info}>
+            <option disabled value="">
+              희망 정보 선택
+            </option>
+            {Object.keys(informations).map((info, index) => (
+              <option key={info} value={info}>
                 {info}
               </option>
             ))}

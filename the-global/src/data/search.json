@@ -1735,14 +1735,30 @@
     ],
     "홍콩": ["링난 대학교", "홍콩대학교", "홍콩중문대학교", "홍콩폴리텍대학교"]
   },
-  "informations": [
-    "기숙사",
-    "수강신청 & 수업과정",
-    "비자 & 보험",
-    "교내 활동",
-    "비용",
-    "입학허가서 유의사항"
-  ],
+  "informations": {
+    "기간": "period",
+    "종류": "program",
+    "국가": "country",
+    "학교": "university",
+    "만족도": "satisfaction",
+    "수강신청": "courseRegistration",
+    "기숙사여부": "dorm",
+    "기숙사설명": "dormInfo",
+    "비자발급기간": "visaPeriod",
+    "비자종류": "visaType",
+    "해외유학생보험": "insurance",
+    "비자/보험설명": "beforeDeparture",
+    "입학허가서": "admissionLetter",
+    "교통편": "transportation",
+    "수업과정": "course",
+    "교내활동": "schoolActivities",
+    "총비용": "totalCost",
+    "항공료": "airfare",
+    "유학생보험": "insuranceCost",
+    "기타생활비": "otherCost",
+    "기타": "etc",
+    "남기는말": "addition"
+  },
   "sorting": [
     "만족도 높은 순",
     "만족도 낮은 순",
