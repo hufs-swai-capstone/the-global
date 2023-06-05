@@ -16,8 +16,8 @@
 .MenuButtons {
     display : flex;
     flex-direction: column;
-    position : absolute;
-    top : 40%;
+    position: absolute;
+    top:40%;
 }
 
 .MenuButtonBox {

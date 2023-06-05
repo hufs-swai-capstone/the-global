@@ -17,7 +17,7 @@
     overflow: auto;
     scroll-snap-type: x proximity;
     scroll-snap-align: center;
-    margin-left : 5%;
+    margin-left: 5%;
 }
 
 .menuBtn { 
