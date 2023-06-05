@@ -4,6 +4,7 @@ import MenuButtonSquare from "../components/MenuButtonSquare";
 import HufsLogo from "../components/HufsLogo";
 import styles from "../styles/Main.module.css";
 import { Link, useNavigate } from "react-router-dom";
+import logo  from "../images/logo.png";
 
 
 function Main() {
@@ -48,6 +49,7 @@ function Main() {
                     </span>
                 </div>
 
+<<<<<<< Updated upstream
                 <div className={styles.MenuButtonBox}>
                     <span>
                         <MenuButtonSquare
@@ -67,6 +69,26 @@ function Main() {
                 </div>
             </div>
             <HufsLogo />
+=======
+  const moveSatisfactionSearchPage = () => {
+    navigate("/satisfaction-search");
+  };
+
+  return (
+    <div className={styles.MenuScreen}>
+      <div className={styles.introduction}>
+        <img
+          src={logo}
+          alt="더 글로벌 로고"
+          className={styles.theGlobalLogo}
+        />
+        <div className={styles.introductionTitle}>
+          <h2>
+            The Global?
+            <br />
+            더(More) Global!
+          </h2>
+>>>>>>> Stashed changes
         </div>
     );
 }
