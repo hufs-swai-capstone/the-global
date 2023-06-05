@@ -1,11 +1,18 @@
 import React, { useEffect, useState } from "react";
 import jsonData from "../data/Course.json";
 import "../styles/ResultStyle.css";
-
+import { useLocation, useNavigate } from "react-router-dom";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
 function Result(props) {
   const lis = [];
+
+  if (props.filteredData.length === 0) {
+    lis.push(
+      <div className="noResult">No Result</div>
+    )
+  };
+
   for (let i = 0; i < props.filteredData.length; i++) {
     let temp = props.filteredData[i];
 
@@ -51,19 +58,16 @@ function Star(props) {
 function SearchResult() {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
+  const selected_data = useLocation().state.selected_data;
+
+  const navigate = useNavigate();
+  const backbtnclick = () => {
+    navigate("/satisfaction-search");
+  }
 
   useEffect(() => {
     setData(jsonData);
   }, []);
-
-  const selected_data = {
-    country: "러시아",
-    university: "전체",
-    order: "만족도 높은 순",
-  };
-  // const selected_data = {
-  //   name : "러시아",
-  // };
 
   useEffect(() => {
     if ('name' in selected_data) {
@@ -74,7 +78,7 @@ function SearchResult() {
   
       const filtered = data.filter((item) => {
         for (const key in filters) {
-          if (filters[key] === "전체") {
+          if (filters[key] === "") {
             continue;
           }
           if (item[key] !== filters[key]) {
@@ -84,14 +88,14 @@ function SearchResult() {
         return true;
       });
   
-      if (order === "만족도 높은 순") {
-        filtered.sort((a, b) => b.satisfaction - a.satisfaction);
-      } else if (order === "만족도 낮은 순") {
+      if (order === "만족도 낮은 순") {
         filtered.sort((a, b) => a.satisfaction - b.satisfaction);
       } else if (order === "학점 높은 순") {
         filtered.sort((a, b) => b.credit - a.credit);
       } else if (order === "학점 낮은 순") {
         filtered.sort((a, b) => a.credit - b.credit);
+      } else {
+        filtered.sort((a, b) => b.satisfaction - a.satisfaction);
       }
   
       setFilteredData(filtered);
@@ -102,6 +106,7 @@ function SearchResult() {
     <div>
       <div className="top">
         <p className="title">강의 검색 결과</p>
+        <button className="backbtn" onClick={backbtnclick}>✖</button>
       </div>
       <div className="show">
         <Result filteredData={filteredData}></Result>

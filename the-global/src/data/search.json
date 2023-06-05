@@ -18,7 +18,7 @@
     "2022/1학기",
     "2022/2학기"
   ],
-  "programs": ["전체", "교환", "7+1"],
+  "programs": ["전체", "교환학생", "파견학생(학과)", "파견학생(우수입학)"],
   "countries": [
     "가나",
     "가봉",
@@ -1736,26 +1736,14 @@
     "홍콩": ["링난 대학교", "홍콩대학교", "홍콩중문대학교", "홍콩폴리텍대학교"]
   },
   "informations": {
-    "기간": "period",
-    "종류": "program",
-    "국가": "country",
-    "학교": "university",
-    "만족도": "satisfaction",
     "수강신청": "courseRegistration",
-    "기숙사여부": "dorm",
-    "기숙사설명": "dormInfo",
-    "비자발급기간": "visaPeriod",
-    "비자종류": "visaType",
-    "해외유학생보험": "insurance",
-    "비자/보험설명": "beforeDeparture",
+    "기숙사": "dorm",
+    "비자/보험설명": "visa/insurance",
     "입학허가서": "admissionLetter",
     "교통편": "transportation",
     "수업과정": "course",
     "교내활동": "schoolActivities",
-    "총비용": "totalCost",
-    "항공료": "airfare",
-    "유학생보험": "insuranceCost",
-    "기타생활비": "otherCost",
+    "비용": "cost",
     "기타": "etc",
     "남기는말": "addition"
   },

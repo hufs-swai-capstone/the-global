@@ -116,6 +116,10 @@ li {
     line-height: 150%;
 }
 
+.content:hover {
+    cursor: pointer;
+}
+
 .infoName {
     font-size: large;
     font-weight: 600;
@@ -142,4 +146,18 @@ li {
     border: 1px solid #1B3EAA;
     padding: 0px 5px;
     margin-right: 5px;
+}
+
+.backbtn {
+    margin-left: 5px;
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.noResult {
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+    color:#1B3EAA;
 }
