@@ -9,17 +9,17 @@
 }
 .contentCard{
     background-color: white;
-    width : 65vw;
-    height : 43vh;
+    width : 275px;
+    height : 368px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
     box-shadow: 5px 8px 15px rgb(153, 150, 150);
-    margin : 0px 15px
+    margin : 0px 15px;
 }
 .title{
-    width: 50vw;
+    width: 200px;
     font-size: 18px;
     color :#1B3EAA;
     font-weight:900;

@@ -11,11 +11,13 @@
     color : #6D6868;
     text-align: center;
     margin-top : 13%;
-    margin-bottom : 5%;
+    margin-bottom : 3%;
 }
 .MenuButtons {
     display : flex;
     flex-direction: column;
+    position: absolute;
+    top:40%;
 }
 
 .MenuButtonBox {
