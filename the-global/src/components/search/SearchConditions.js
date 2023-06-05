@@ -52,7 +52,7 @@ const SearchConditions = () => {
       };
 
       navigate("/course-result", {
-        state: selected_data,
+        state: { selected_data },
       });
     }
   };
@@ -66,12 +66,6 @@ const SearchConditions = () => {
   const replaceUnselectedDefault = () => {
     if (selectedSorting === "") setSelectedSorting("만족도 높은 순");
   };
-
-  useEffect(() => {
-    console.log("Selected Country:", selectedCountry);
-    console.log("Selected University:", selectedUniversity);
-    console.log("Selected Sorting:", selectedSorting);
-  }, [selectedCountry, selectedUniversity, selectedSorting]);
 
   return (
     <Container>

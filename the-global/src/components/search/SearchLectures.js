@@ -26,7 +26,7 @@ const SearchLectures = () => {
       const selected_data = { name: searchText };
 
       navigate("/course-result", {
-        state: selected_data,
+        state: { selected_data },
       });
     }
   };

@@ -55,8 +55,7 @@ const ReturnReportSearch = () => {
 
   const handleInfoChange = (e) => {
     const value = e.target.value;
-    const changeValue = informations[value];
-    setSelectedInfo(changeValue);
+    setSelectedInfo(value);
   };
 
   const handleSearchClick = () => {
@@ -68,11 +67,11 @@ const ReturnReportSearch = () => {
         program: `${selectedProgram}`,
         country: `${selectedCountry}`,
         university: `${selectedUniversity}`,
-        selected_information: `${selectedInfo}`,
+        selected_information: `${informations[selectedInfo]}`,
       };
 
       navigate("/report-result", {
-        state: selected_data,
+        state: { selected_data },
       });
     }
   };
