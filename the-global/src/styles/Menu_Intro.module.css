@@ -5,33 +5,34 @@
     flex-direction: column;
     justify-content: center;
     position: absolute;
-    top : 38%;
-    width : 100%;
+    top : 35%;
+    width : 60%;
+    margin-top:2%;
 }
 .contentCards {
     display:flex;
     align-items: center;
-    width: 80%;
+    width: 400px;
     height : 400px;
     overflow: auto;
     scroll-snap-type: x proximity;
-    margin : 0 15vw;
     scroll-snap-align: center;
+    margin-left : 5%;
 }
 
 .menuBtn { 
     display: flex;
     justify-content: center;
     margin-top: 5%;
-    margin-bottom : 3%;
-
+    margin-bottom : 5%;
 } 
 
 .instruction {
     font-size: 12px;
     color : #6D6868;
-    text-align: center;
-    margin-bottom: 3%;;
+    width : 100%;
+    margin-left : 15%;
+    margin-right : 15%;
 }
 
 .usefulInfo{
