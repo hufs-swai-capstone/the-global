@@ -23,7 +23,7 @@ const SearchLectures = () => {
 
   const handleSearchClick = () => {
     if (searchText !== "") {
-      const selected_data = searchText;
+      const selected_data = { name: searchText };
 
       navigate("/course-result", {
         state: selected_data,
