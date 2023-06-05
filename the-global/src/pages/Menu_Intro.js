@@ -4,13 +4,14 @@ import MenuButtonRectangular from "../components/MenuButtonRectangular";
 import ContentCard from "../components/ContentCard";
 import HufsLogo from "../components/HufsLogo";
 import styles from "../styles/Menu_Intro.module.css"
+import owl1 from "../images/owl1.png";
 
 function MenuIntro() {
     return (
         <div>
             <div className={styles.menuBtn}>
                 <MenuButtonRectangular
-                    imgSrc={"../images/owl1.png"}
+                    imgSrc={owl1}
                     text={"프로그램 소개"}
                     description1={"교환학생과 7+1이 무엇인가요?"}
                     description2={"선발은 어떻게 이루어지나요?"}
