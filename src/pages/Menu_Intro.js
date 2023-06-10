@@ -8,7 +8,7 @@ import owl1 from "../images/owl1.png";
 
 function MenuIntro() {
     return (
-        <div>
+        <div className={styles.entirePage}>
             <div className={styles.menuBtn}>
                 <MenuButtonRectangular
                     imgSrc={owl1}
@@ -20,7 +20,7 @@ function MenuIntro() {
             <p className={styles.usefulInfo}>2023년도 2학기 국제교류 프로그램 선발 일정<br/>2023.3.2~2023.3.24</p>
                 
             <div className={styles.contentSection}>
-                <span className={styles.instruction}>카드를 좌우로 넘겨 세부 사항을 확인하세요!</span>
+                <p className={styles.instruction}>카드를 좌우로 넘겨 세부 사항을 확인하세요!</p>
                 <div className={styles.contentCards}>
                     <ContentCard
                         title={"교환학생과\n7+1 프로그램의 차이"}
@@ -41,7 +41,6 @@ function MenuIntro() {
             </div>             
             <HufsLogo />
         </div>
-        
     );
 }
 

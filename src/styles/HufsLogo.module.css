@@ -2,8 +2,6 @@
 .logo {
     width : 257px;
     height : 59px;
-    position : absolute;
-    bottom : 2%;
 }
 .logoArea {
     display: flex;

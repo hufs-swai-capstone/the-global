@@ -1,41 +1,39 @@
 /* created by Jisu */
-
 .MenuScreen{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    height : 90vh;
 }
 
 .MenuButtonGuide {
     font-size: 12px;
     color : #6D6868;
     text-align: center;
-    margin-top : 13%;
-    margin-bottom : 3%;
+    margin-bottom: 1%;
 }
 .MenuButtons {
     display : flex;
     flex-direction: column;
-    position: absolute;
-    top:40%;
 }
 
 .MenuButtonBox {
     width : 288px;
     height : 130px;
-    margin-bottom : 13%;
+    margin-bottom : 10%;
     display: flex;
     justify-content: center;
 }
 
 .introduction {
     width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .theGlobalLogo{
-    margin-top : 50px;
     width : 100%;
-    height : 10%;
-    margin-bottom : 35px;
 
 }
 .introductionTitle{
@@ -43,14 +41,12 @@
     font-weight: 800;
     color : #052B48;
     text-align: center;
-    margin-bottom: 25px;
     line-height: 130%;
 }
 
 .introductionDescription{
     font-weight: 500;
     text-align: center;
-    margin-bottom: 25px;
     line-height: 130%;
 }
 
