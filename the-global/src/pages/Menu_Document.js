@@ -9,7 +9,7 @@ import owl3 from "../images/owl3.png";
 
 function MenuDocument() {
     return (
-        <div>
+        <div className={styles.entirePage}>
             <div className={styles.menuBtn}>
                 <MenuButtonRectangular
                     imgSrc = {owl3}
@@ -21,9 +21,9 @@ function MenuDocument() {
             <p className={styles.usefulInfo}>2023년도 2학기 국제교류 프로그램 선발 일정<br />2023.3.2~2023.3.24</p>
                 
             <div className={styles.contentSection}>
-                <span className={styles.instruction}>카드를 좌우로 넘겨 세부 사항을 확인하세요!</span>
+                <p className={styles.instruction}>카드를 좌우로 넘겨 세부 사항을 확인하세요!</p>
                 <div className={styles.contentCards}>
-                    <ContentCard
+                    <ContentCard 
                         title={"선발 후 준비해야 하는 서류"}
                         subTitle1={"파견 전 반드시 해야하는 것들"}
                         detail1={"종합정보시스템에 서약서 제출,\n한국외대 국제교류팀 네이버 카페 가입\n(파견될 학교 게시판 새글 알림설정 추천)\n사전 학점 인정 신청"}
