@@ -2,7 +2,7 @@
   "name": "the-global",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://capstondesig-exchangestudent.github.io/the-global/",
+  "homepage": "https://hufs-swai-capstone.github.io/the-global/",
   "dependencies": {
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
