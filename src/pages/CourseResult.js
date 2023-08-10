@@ -100,7 +100,7 @@ function SearchResult() {
 
       setFilteredData(filtered);
     }
-  }, [data]);
+  }, [data, selected_data]);
 
   return (
     <div>

@@ -3,7 +3,7 @@
 import ContentCard from "../components/ContentCard";
 import HufsLogo from "../components/HufsLogo";
 import MenuButtonRectangular from "../components/MenuButtonRectangular";
-import styles from "../styles/Menu_Document.module.css";
+import styles from "../styles/Menu.module.css";
 import owl3 from "../images/owl3.jpg";
 
 function MenuDocument() {
