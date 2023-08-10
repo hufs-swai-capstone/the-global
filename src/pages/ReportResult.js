@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import jsonData from "../data/data.json";
+import jsonData from "../data/full_data.json";
 import "../styles/ResultStyle.css";
 import { useLocation, useNavigate } from "react-router-dom";
 

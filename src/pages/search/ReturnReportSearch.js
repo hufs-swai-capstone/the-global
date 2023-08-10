@@ -13,7 +13,7 @@ import {
 } from "../../styles/SearchStyle";
 
 // data
-import searchData from "../../data/search.json";
+import searchData from "../../data/search_data.json";
 
 // icon
 import SearchIcon from "@mui/icons-material/Search";
