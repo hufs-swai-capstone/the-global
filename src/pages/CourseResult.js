@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import jsonData from "../data/Course.json";
+import jsonData from "../data/course.json";
 import "../styles/ResultStyle.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
@@ -8,10 +8,8 @@ function Result(props) {
   const lis = [];
 
   if (props.filteredData.length === 0) {
-    lis.push(
-      <div className="noResult">No Result</div>
-    )
-  };
+    lis.push(<div className="noResult">No Result</div>);
+  }
 
   for (let i = 0; i < props.filteredData.length; i++) {
     let temp = props.filteredData[i];
@@ -63,19 +61,21 @@ function SearchResult() {
   const navigate = useNavigate();
   const backbtnclick = () => {
     navigate("/satisfaction-search");
-  }
+  };
 
   useEffect(() => {
     setData(jsonData);
   }, []);
 
   useEffect(() => {
-    if ('name' in selected_data) {
-      const filtered = data.filter((item) => item.courseName.includes(selected_data.name));
+    if ("name" in selected_data) {
+      const filtered = data.filter((item) =>
+        item.courseName.includes(selected_data.name)
+      );
       setFilteredData(filtered);
     } else {
       const { order, ...filters } = selected_data;
-  
+
       const filtered = data.filter((item) => {
         for (const key in filters) {
           if (filters[key] === "") {
@@ -87,7 +87,7 @@ function SearchResult() {
         }
         return true;
       });
-  
+
       if (order === "만족도 낮은 순") {
         filtered.sort((a, b) => a.satisfaction - b.satisfaction);
       } else if (order === "학점 높은 순") {
@@ -97,7 +97,7 @@ function SearchResult() {
       } else {
         filtered.sort((a, b) => b.satisfaction - a.satisfaction);
       }
-  
+
       setFilteredData(filtered);
     }
   }, [data]);
@@ -106,7 +106,9 @@ function SearchResult() {
     <div>
       <div className="top">
         <p className="title">강의 검색 결과</p>
-        <button className="backbtn" onClick={backbtnclick}>✖</button>
+        <button className="backbtn" onClick={backbtnclick}>
+          ✖
+        </button>
       </div>
       <div className="show">
         <Result filteredData={filteredData}></Result>

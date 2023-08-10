@@ -1,8 +1,9 @@
 import MenuButtonSquare from "../components/MenuButtonSquare";
+import { useNavigate } from "react-router-dom";
+
+import logo from "../images/logo.jpg";
 import HufsLogo from "../components/HufsLogo";
 import styles from "../styles/Main.module.css";
-import { useNavigate } from "react-router-dom";
-import logo from "../images/logo.png";
 
 function Main() {
   const navigate = useNavigate();

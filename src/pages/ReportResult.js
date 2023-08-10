@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from "react";
-import jsonData from "../data/Data.json";
+import jsonData from "../data/data.json";
 import "../styles/ResultStyle.css";
-import { useLocation, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom";
 
 function Result(props) {
   const lis = [];
 
   if (props.filteredData.length === 0) {
-    lis.push(
-      <div className="noResult">No Result</div>
-    )
-  };
-  
-
+    lis.push(<div className="noResult">No Result</div>);
+  }
 
   const navigate = useNavigate();
   const resultclick = (content) => {
     navigate("/report", {
       state: { content },
     });
-  }
+  };
 
   if (props.content === "visa/insurance") {
     for (let i = 0; i < props.filteredData.length; i++) {
@@ -35,17 +31,20 @@ function Result(props) {
           </div>
           <div className="content" onClick={() => resultclick(temp)}>
             <span className="subinfo">비자</span>
-            {temp.visaType}<br />
+            {temp.visaType}
+            <br />
             <span className="subinfo">발급소요기간</span>
-            {temp.visaPeriod}<br />
+            {temp.visaPeriod}
+            <br />
             <span className="subinfo">보험</span>
-            {temp.insurance}<br />
+            {temp.insurance}
+            <br />
             <br />
             {temp.beforeDeparture}
-          </div>      
+          </div>
         </div>
       );
-    }; 
+    }
   } else if (props.content === "dorm") {
     for (let i = 0; i < props.filteredData.length; i++) {
       let temp = props.filteredData[i];
@@ -61,12 +60,13 @@ function Result(props) {
           <div className="content" onClick={() => resultclick(temp)}>
             <span className="subinfo">신청</span>
             {temp.dorm}
-            <br /><br />
+            <br />
+            <br />
             {temp.dormInfo}
-          </div>      
+          </div>
         </div>
       );
-    }; 
+    }
   } else if (props.content === "cost") {
     for (let i = 0; i < props.filteredData.length; i++) {
       let temp = props.filteredData[i];
@@ -80,7 +80,7 @@ function Result(props) {
             </ol>
           </div>
           <div className="content" onClick={() => resultclick(temp)}>
-          <span className="subinfo">총 비용</span>
+            <span className="subinfo">총 비용</span>
             {temp.totalCost}
             <br />
             <span className="subinfo">항공비</span>
@@ -91,10 +91,10 @@ function Result(props) {
             <br />
             <span className="subinfo">기타 비용</span>
             {temp.otherCost}
-          </div>      
+          </div>
         </div>
       );
-    }; 
+    }
   } else {
     for (let i = 0; i < props.filteredData.length; i++) {
       let temp = props.filteredData[i];
@@ -109,11 +109,11 @@ function Result(props) {
           </div>
           <div className="content" onClick={() => resultclick(temp)}>
             {temp[props.content]}
-          </div>      
+          </div>
         </div>
       );
-    };
-  };
+    }
+  }
   return <div>{lis}</div>;
 }
 
@@ -124,7 +124,7 @@ function ReportResult() {
   const navigate = useNavigate();
   const backbtnclick = () => {
     navigate("/return-report-search");
-  }
+  };
 
   useEffect(() => {
     setData(jsonData);
@@ -149,7 +149,9 @@ function ReportResult() {
       <div className="top">
         <p className="title">귀국보고서 검색 결과</p>
         <p className="count">{filteredData.length}건</p>
-        <button className="backbtn" onClick={backbtnclick}>✖</button>
+        <button className="backbtn" onClick={backbtnclick}>
+          ✖
+        </button>
       </div>
       <div className="show">
         <Result
